@@ -19,7 +19,7 @@ app.use("/booking", bookingsRouter);
 
 mongoose
   .connect(
-    `mongodb+srv://saurabhkumar46485:KTCDen4R1SKG1zri@cluster0.boq277x.mongodb.net/?retryWrites=true&w=majority`
+    `mongodb+srv://saurabh46485:b1TstdO9aNKPfnD5@cluster0.pvguwlp.mongodb.net/?retryWrites=true&w=majority`
   )
   .then(() =>
     app.listen(5000, () =>
