@@ -27,3 +27,11 @@ mongoose
     )
   )
   .catch((e) => console.log(e));
+
+//  ADMIN 
+//   "email":"saurabh1637@gmail.com",
+//     "password":"qwertyn7878"
+
+// USER
+//   "email":"b104473@gmail.com",
+//     "password":"b104473@"

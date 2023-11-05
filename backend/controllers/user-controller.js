@@ -1,6 +1,8 @@
 import User from "../models/User";
 import bcrypt from "bcryptjs";
 import Bookings from "../models/Booking.js";
+
+
 export const getAllUsers = async (req, res, next) => {
   let users;
   try {
@@ -13,6 +15,8 @@ export const getAllUsers = async (req, res, next) => {
   }
   return res.status(200).json({ users });
 };
+
+
 
 export const singup = async (req, res, next) => {
   const { name, email, password } = req.body;
@@ -39,6 +43,9 @@ export const singup = async (req, res, next) => {
   }
   return res.status(201).json({ id: user._id });
 };
+
+
+
 export const updateUser = async (req, res, next) => {
   const id = req.params.id;
   const { name, email, password } = req.body;
@@ -70,6 +77,9 @@ export const updateUser = async (req, res, next) => {
   res.status(200).json({ message: "Updated Sucessfully" });
 };
 
+
+
+
 export const deleteUser = async (req, res, next) => {
   const id = req.params.id;
   let user;
@@ -83,6 +93,8 @@ export const deleteUser = async (req, res, next) => {
   }
   return res.status(200).json({ message: "Deleted Successfully" });
 };
+
+
 
 export const login = async (req, res, next) => {
   const { email, password } = req.body;
@@ -112,6 +124,10 @@ export const login = async (req, res, next) => {
     .status(200)
     .json({ message: "Login Successfull", id: existingUser._id });
 };
+
+
+
+
 export const getBookingsOfUser = async (req, res, next) => {
   const id = req.params.id;
   let bookings;
@@ -127,6 +143,10 @@ export const getBookingsOfUser = async (req, res, next) => {
   }
   return res.status(200).json({ bookings });
 };
+
+
+
+
 export const getUserById = async (req, res, next) => {
   const id = req.params.id;
   let user;
